@@ -39,23 +39,33 @@ class App extends Component {
   }
 
   addItem(e) {
-
+    //Prevent button click from submitting form
     e.preventDefault();
+
+    //Create variables for our list, the item to add,and our form
     let list = this.state.list;
     const newItem = document.getElementById("addInput");
     const form = document.getElementById("addItemForm");
 
+    // If our input has a value
     if(newItem.value !="") {
 
+      // Add the new item to the end of our list array
       list.push(newItem.value);
+      //list.classList.add("animated","rotateInUpLeft");
 
+      // The nwe use taht to set the state for list 
       this.setState({
         list: list
+        
       });
 
+      // Finally we need to reset the form
       newItem.classList.remove("is-danger");
       form.reset();
     } else {
+
+      //If the input doesnt have a value, make the border red since its required
       newItem.classList.add("is-danger");
     }
   }
@@ -67,7 +77,7 @@ class App extends Component {
       <h1> Search Box with To do List</h1>
         <div className="container">
           <section className="section">
-            <List items={this.state.list} delete={this.removeItem} />
+            <List items={this.state.list} delete={this.removeItem}  />
           </section>
 
           <section className="section">

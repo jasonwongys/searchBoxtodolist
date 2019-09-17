@@ -51,7 +51,7 @@ class List extends Component {
                 <input onChange={this.handleChange} type="text" className="input" placeholder="Search.." />
                 <ul>
                     {this.state.filtered.map(item => (
-                        <li key={item}>
+                        <li key={item} className="animated fadeIn">
                             {item} &nbsp;
                 <span className="delete" onClick={() => this.props.delete(item)} /></li>
                     ))}

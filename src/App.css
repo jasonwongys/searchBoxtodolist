@@ -5,3 +5,7 @@
   margin: 0 auto;
   
 }
+
+.fadeIn {
+  animation: fadeIn 1s;
+}
