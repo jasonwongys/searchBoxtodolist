@@ -87,7 +87,7 @@ class App extends Component {
                 className="input"
                 id="addInput"
                 placeholder="something that needs to be done"/>
-                
+                <p />
                 <button className="button is-info" onClick={this.addItem}> Add Item </button>
             </form>
           </section>
