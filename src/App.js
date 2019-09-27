@@ -48,7 +48,7 @@ class App extends Component {
     const form = document.getElementById("addItemForm");
 
     // If our input has a value
-    if(newItem.value !="") {
+    if(newItem.value !== "") {
 
       // Add the new item to the end of our list array
       list.push(newItem.value);
@@ -74,7 +74,7 @@ class App extends Component {
     return (
       
       <div className="content">
-      <h1> Search Box with To do List</h1>
+      
         <div className="container">
           <section className="section">
             <List items={this.state.list} delete={this.removeItem}  />
